@@ -2216,4 +2216,32 @@ mod tests {
             );
         }
     }
+    #[test]
+    fn thresh_expressive_bip379() {
+        // BIP379 computes the "e" property of a thresh as "all are s"; the "m"
+        // property is what additionally requires every child to be "e".
+        //
+        // or_i(pk(A),pk(B)) is a legal thresh child (Bdu) which is "s" but not
+        // "e", so a threshold over such children discriminates between the two
+        // rules. Such a threshold is malleable either way, which is why the
+        // distinction is not observable through is_non_malleable().
+        let child = Miniscript::<String, Segwitv0>::from_str_insane("or_i(pk(A),pk(B))").unwrap();
+        assert!(child.ty.mall.signed);
+        assert_eq!(child.ty.mall.dissat, types::Dissat::Unknown);
+
+        let ms = Miniscript::<String, Segwitv0>::from_str_insane(
+            "thresh(2,or_i(pk(A),pk(B)),a:or_i(pk(C),pk(D)))",
+        )
+        .unwrap();
+        assert_eq!(ms.ty.mall.dissat, types::Dissat::Unique);
+        assert!(!ms.ty.mall.non_malleable);
+
+        // A threshold with a non-signed child is not "e" under either rule.
+        let ms = Miniscript::<String, Segwitv0>::from_str_insane(&format!(
+            "thresh(2,or_i(pk(A),pk(B)),a:sha256({}))",
+            sha256::Hash::hash(&[])
+        ))
+        .unwrap();
+        assert_eq!(ms.ty.mall.dissat, types::Dissat::Unknown);
+    }
 }
