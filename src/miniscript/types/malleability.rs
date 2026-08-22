@@ -311,7 +311,14 @@ impl Malleability {
         }
 
         Self {
-            dissat: if all_are_dissat_unique && signed_count == n {
+            // A threshold all of whose children are signed, but not all of
+            // which have a unique dissatisfaction, is Unique here even though a
+            // third party can vary the dissatisfaction of such a child. This is
+            // BIP379's rule ("e=all are s") and it cannot mislead a caller:
+            // non_malleable below does require every child to be Unique, and
+            // non-malleability is conjunctive, so every expression containing
+            // such a threshold is malleable anyway.
+            dissat: if signed_count == n {
                 Dissat::Unique
             } else {
                 Dissat::Unknown

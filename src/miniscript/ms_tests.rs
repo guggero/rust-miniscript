@@ -15433,7 +15433,7 @@ mod tests {
         ms_test("and_b(or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),sc:pk_k(A))", "usdB");
         ms_test("or_d(or_i(0,or_i(0,multi(2,A,B,C))),multi(2,D,E,F))", "dBesu");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_i(multi(2,A,B,C),0),j:multi(2,D,E,F))", "usdB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("andor(or_i(multi(2,A,B,C),0),multi(2,D,E,F),multi(2,G,I,J))", "dBesu");
         ms_test("andor(or_i(0,multi(2,A,B,C)),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),j:multi(2,D,E,F))", "usdB");
         ms_test("c:andor(jc:pk_h(A),pk_h(B),pk_k(C))", "dBesu");
@@ -15678,7 +15678,7 @@ mod tests {
         ms_test("and_b(multi(2,A,B,C),a:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),j:multi(2,D,E,F)))", "dBsun");
         ms_test("and_b(multi(2,A,B,C),a:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F),after(1)))", "usBn");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_b(multi(2,A,B,C),a:multi(2,D,E,F)),0)", "usdB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_b(j:multi(2,A,B,C),a:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001)))", "usBn");
         ms_test("and_v(v:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C)),jc:pk_h(D))", "usB");
         ms_test("or_d(or_i(0,multi(2,A,B,C)),c:pk_k(D))", "dBesu");
@@ -16394,7 +16394,7 @@ mod tests {
         ms_test("and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_d(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),after(500000001)),multi(2,A,B,C))", "usB");
         ms_test("and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),multi(2,D,E,F)),or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)))", "sBf");
         ms_test("and_b(andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),after(500000001)),a:multi(2,D,E,F))", "usB");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("or_d(j:multi(2,A,B,C),and_b(after(500000001),a:multi(2,D,E,F)))", "usB");
         ms_test("andor(and_b(multi(2,A,B,C),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F),multi(2,G,I,J))", "dBesu");
         ms_test("andor(or_i(0,sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,A,B,C),multi(2,D,E,F))", "usdB");
@@ -16411,7 +16411,7 @@ mod tests {
         ms_test("andor(jc:pk_h(A),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,B,C,D))", "dBesu");
         ms_test("or_d(or_i(jc:pk_h(A),0),multi(2,B,C,D))", "dBesu");
         ms_test("or_i(0,andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C)),multi(2,D,E,F),0))", "usdB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("c:andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C)),pk_k(D),pk_h(E))", "usdB");
         ms_test("c:and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001),after(500000001)),pk_h(A))", "usB");
         ms_test("andor(or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,A,B,C),multi(2,D,E,F))", "usdB");
@@ -16590,7 +16590,7 @@ mod tests {
         ms_test("andor(j:multi(2,A,B,C),or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)),multi(2,D,E,F))", "esdB");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),andor(multi(2,D,E,F),or_i(0,sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,G,I,J)))", "usdB");
         ms_test("or_d(c:pk_k(A),or_d(j:multi(2,B,C,D),multi(2,E,F,G)))", "dBesu");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),c:pk_h(A),jc:pk_k(B))", "usdB");
         ms_test("and_v(v:multi(2,A,B,C),or_d(andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F)),after(1)))", "sBfn");
         ms_test("andor(multi(2,A,B,C),multi(2,D,E,F),or_d(j:multi(2,G,I,J),multi(2,K,L,M)))", "dBesu");
@@ -17160,7 +17160,7 @@ mod tests {
         ms_test("andor(j:multi(2,A,B,C),n:after(500000001),multi(2,D,E,F))", "dBesu");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),or_d(multi(2,D,E,F),j:multi(2,G,I,J)))", "usdB");
         ms_test("and_b(or_d(j:multi(2,A,B,C),after(500000001)),a:multi(2,D,E,F))", "usB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("andor(j:multi(2,A,B,C),or_i(0,after(500000001)),0)", "esdB");
         ms_test("and_v(v:multi(2,A,B,C),or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:multi(2,D,E,F)))", "Bsufn");
         ms_test("or_d(or_d(j:multi(2,A,B,C),c:pk_k(D)),multi(2,E,F,G))", "dBesu");
@@ -17267,7 +17267,7 @@ mod tests {
         ms_test("or_i(c:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),pk_h(A),pk_k(B)),0)", "usdB");
         ms_test("andor(multi(2,A,B,C),multi(2,D,E,F),or_d(j:multi(2,G,I,J),multi(2,K,L,M)))", "dBesu");
         ms_test("and_v(v:multi(2,A,B,C),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)))", "sBfn");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("or_i(0,thresh(2,sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:multi(2,A,B,C),a:multi(2,D,E,F)))", "usdB");
         ms_test("or_d(j:multi(2,A,B,C),and_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:multi(2,D,E,F)))", "usdB");
         ms_test("andor(andor(multi(2,A,B,C),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F),multi(2,G,I,J))", "usdB");
@@ -18107,7 +18107,7 @@ mod tests {
         ms_test("andor(or_b(multi(2,A,B,C),s:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F),0)", "usdB");
         ms_test("andor(or_d(multi(2,A,B,C),multi(2,D,E,F)),or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,G,I,J))", "dBesu");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),or_i(andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F),multi(2,G,I,J)),0))", "usdB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("andor(or_i(0,multi(2,A,B,C)),after(500000001),c:pk_h(D))", "esdB");
         ms_test("andor(j:multi(2,A,B,C),or_i(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),0),multi(2,D,E,F))", "dBesu");
         ms_test("andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_d(multi(2,A,B,C),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b))),multi(2,D,E,F),multi(2,G,I,J))", "usdB");
@@ -18333,7 +18333,7 @@ mod tests {
         ms_test("andor(j:multi(2,A,B,C),c:pk_k(D),multi(2,E,F,G))", "dBesu");
         ms_test("andor(multi(2,A,B,C),or_d(j:multi(2,D,E,F),after(500000001)),multi(2,G,I,J))", "esdB");
         ms_test("and_v(v:or_d(j:multi(2,A,B,C),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F))", "usB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_b(and_v(v:multi(2,A,B,C),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001))),s:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b))", "Bsufn");
         ms_test("andor(multi(2,A,B,C),n:after(500000001),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F),c:pk_k(G)))", "usdB");
         ms_test("or_b(andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),multi(2,D,E,F)),a:multi(2,G,I,J))", "dBesu");
@@ -18558,7 +18558,7 @@ mod tests {
         ms_test("or_b(or_i(multi(2,A,B,C),0),sjc:pk_k(D))", "dBesu");
         ms_test("and_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),multi(2,D,E,F)))", "dBsun");
         ms_test("andor(multi(2,A,B,C),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),0)", "esdB");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("and_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:or_d(j:multi(2,A,B,C),multi(2,D,E,F)))", "dBsun");
         ms_test("or_d(or_d(multi(2,A,B,C),jc:pk_h(D)),multi(2,E,F,G))", "dBesu");
         ms_test("c:andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),pk_k(A),pk_k(B))", "usdB");
@@ -19864,7 +19864,7 @@ mod tests {
         ms_test("or_d(and_b(multi(2,A,B,C),s:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F))", "dBesu");
         ms_test("or_d(multi(2,A,B,C),andor(multi(2,D,E,F),or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,G,I,J)),multi(2,K,L,M)))", "dBesu");
         ms_test("andor(or_b(multi(2,A,B,C),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F),0)", "usdB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("c:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),pk_h(A),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),pk_h(B),pk_h(C)))", "usdB");
         ms_test("andor(j:multi(2,A,B,C),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),j:multi(2,D,E,F))", "usdB");
         ms_test("c:andor(or_i(0,multi(2,A,B,C)),pk_h(D),pk_h(E))", "dBesu");
@@ -20204,7 +20204,7 @@ mod tests {
         ms_test("and_v(v:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b))),multi(2,A,B,C))", "usB");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_d(multi(2,A,B,C),multi(2,D,E,F)),j:multi(2,G,I,J))", "usdB");
         ms_test("andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),j:multi(2,A,B,C),multi(2,D,E,F))", "usdB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("n:andor(j:multi(2,A,B,C),after(500000001),j:multi(2,D,E,F))", "usdB");
         ms_test("and_v(or_c(or_i(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),0),v:after(1)),multi(2,A,B,C))", "usB");
         ms_test("andor(multi(2,A,B,C),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001),multi(2,D,E,F)),0)", "esdB");
@@ -20502,7 +20502,7 @@ mod tests {
         ms_test("and_v(v:multi(2,A,B,C),or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)))", "Bsufn");
         ms_test("j:and_b(c:pk_h(A),a:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001)))", "dBsun");
         ms_test("andor(and_b(multi(2,A,B,C),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),after(500000001),multi(2,D,E,F))", "esdB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,A,B,C))", "usB");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),or_d(multi(2,D,E,F),j:multi(2,G,I,J)))", "usdB");
         ms_test("or_b(or_i(0,j:multi(2,A,B,C)),a:multi(2,D,E,F))", "dBesu");
@@ -20570,7 +20570,7 @@ mod tests {
         ms_test("and_v(v:multi(2,A,B,C),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)))", "sBfn");
         ms_test("and_v(or_c(j:multi(2,A,B,C),v:multi(2,D,E,F)),multi(2,G,I,J))", "usBf");
         ms_test("andor(j:multi(2,A,B,C),jc:pk_h(D),c:pk_k(E))", "dBesu");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("or_d(or_i(or_d(multi(2,A,B,C),multi(2,D,E,F)),0),multi(2,G,I,J))", "dBesu");
         ms_test("andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),jc:and_v(v:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),pk_k(D)))", "usdB");
         ms_test("or_d(or_i(0,or_d(multi(2,A,B,C),multi(2,D,E,F))),multi(2,G,I,J))", "dBesu");
@@ -20603,10 +20603,10 @@ mod tests {
         ms_test("thresh(2,multi(2,A,B,C),a:or_b(multi(2,D,E,F),a:multi(2,G,I,J)),a:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b))", "usdB");
         ms_test("and_v(v:and_v(or_c(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),v:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),after(500000001)),multi(2,A,B,C))", "usB");
         ms_test("thresh(2,ndvn:after(500000001),a:multi(2,A,B,C),aj:multi(2,D,E,F))", "usdB");
-        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),a:multi(2,D,E,F),aj:multi(2,G,I,J))", "dBsue");
         ms_test("and_b(n:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1),after(1)),a:multi(2,A,B,C))", "usB");
         ms_test("and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),c:pk_k(A),after(1)),multi(2,B,C,D))", "usB");
-        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_b(or_b(multi(2,A,B,C),a:multi(2,D,E,F)),a:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)))", "usB");
         ms_test("andor(multi(2,A,B,C),or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),or_i(after(1),0)),multi(2,D,E,F))", "esdB");
         ms_test("or_d(or_i(0,or_i(multi(2,A,B,C),0)),multi(2,D,E,F))", "dBesu");
@@ -20902,7 +20902,7 @@ mod tests {
         ms_test("andor(or_i(0,multi(2,A,B,C)),multi(2,D,E,F),multi(2,G,I,J))", "dBesu");
         ms_test("or_d(andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),0),j:multi(2,D,E,F))", "usdB");
         ms_test("andor(multi(2,A,B,C),or_d(j:multi(2,D,E,F),after(500000001)),multi(2,G,I,J))", "esdB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("c:and_v(v:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)),pk_k(A))", "usB");
         ms_test("andor(j:multi(2,A,B,C),after(1),j:multi(2,D,E,F))", "sdB");
         ms_test("or_d(j:multi(2,A,B,C),or_d(multi(2,D,E,F),multi(2,G,I,J)))", "dBesu");
@@ -20941,7 +20941,7 @@ mod tests {
         ms_test("c:andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),pk_k(A),pk_h(B))", "usdB");
         ms_test("andor(j:multi(2,A,B,C),or_b(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),a:multi(2,D,E,F)),multi(2,G,I,J))", "dBesu");
         ms_test("c:and_v(or_c(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),vn:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001))),pk_h(A))", "usB");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("andor(j:multi(2,A,B,C),j:multi(2,D,E,F),multi(2,G,I,J))", "dBesu");
         ms_test("c:andor(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),pk_k(A),pk_h(B))", "usdB");
         ms_test("or_b(j:multi(2,A,B,C),ac:pk_k(D))", "dBesu");
@@ -21286,7 +21286,7 @@ mod tests {
         ms_test("andor(and_b(multi(2,A,B,C),s:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),multi(2,D,E,F),multi(2,G,I,J))", "dBesu");
         ms_test("or_d(j:multi(2,A,B,C),or_i(0,j:multi(2,D,E,F)))", "usdB");
         ms_test("j:and_b(multi(2,A,B,C),sn:or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(1)))", "dBsun");
-        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),a:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_v(v:or_d(or_d(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C)),after(500000001)),multi(2,D,E,F))", "usB");
         ms_test("andor(j:multi(2,A,B,C),or_i(multi(2,D,E,F),0),multi(2,G,I,J))", "dBesu");
         ms_test("andor(multi(2,A,B,C),sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F),multi(2,G,I,J)))", "usdB");
@@ -21402,7 +21402,7 @@ mod tests {
         ms_test("c:andor(jc:pk_k(A),pk_k(B),pk_h(C))", "dBesu");
         ms_test("and_b(multi(2,A,B,C),a:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,D,E,F),c:pk_h(G)))", "dBsun");
         ms_test("andor(or_i(multi(2,A,B,C),0),c:pk_k(D),multi(2,E,F,G))", "dBesu");
-        ms_test("thresh(2,j:multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsu");
+        ms_test("thresh(2,j:multi(2,A,B,C),aj:multi(2,D,E,F),a:multi(2,G,I,J))", "dBsue");
         ms_test("and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),multi(2,A,B,C),multi(2,D,E,F)),1)", "usBf");
         ms_test("and_v(or_c(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),v:sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b)),c:pk_h(A))", "usB");
         ms_test("and_b(multi(2,A,B,C),s:and_v(v:andor(sha256(c7bcb868ab4db55ca45f8eefe5b1677d9fc2c4111e295baaee1b34ed352c719b),after(500000001),after(500000001)),1))", "usBn");
